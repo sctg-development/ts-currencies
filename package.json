@@ -1,6 +1,6 @@
 {
   "name": "@sctg/currencies",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "ISO currencies in Typescript",
   "main": "dist/index.js",
   "type": "module",
