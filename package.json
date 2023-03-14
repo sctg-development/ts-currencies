@@ -1,6 +1,6 @@
 {
   "name": "@sctg/currencies",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "ISO currencies in Typescript",
   "main": "dist/index.js",
   "type": "module",
@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/eltorio/currencies.git"
   },
+  "files": ["dist"],
   "keywords": [],
   "author": "",
   "license": "ISC",
