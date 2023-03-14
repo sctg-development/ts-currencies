@@ -13,7 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/eltorio/currencies.git"
   },
-  "files": ["dist"],
   "keywords": [],
   "author": "",
   "license": "ISC",
