@@ -27,6 +27,7 @@
     "typescript": "^4.9.5"
   },
   "publishConfig": {
-    "tag": "latest"
+    "tag": "latest",
+    "access": "public"
   }
 }
