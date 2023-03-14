@@ -4,6 +4,7 @@
   "description": "ISO currencies in Typescript",
   "main": "dist/index.js",
   "type": "module",
+  "private": false,
   "scripts": {
     "test": "echo \"OK: no test specified\" && exit 0",
     "build": "tsup index.ts --clean --dts --format esm && tsup index.ts --format cjs  "
