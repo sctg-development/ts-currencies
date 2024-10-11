@@ -1,24 +1,68 @@
-# currencies
-ISO currencies in Typescript
+# 🌍 @sctg/currencies
 
-npm i --save @sctg/currencies
+A comprehensive TypeScript library providing easy access to ISO currency codes and related information.
 
-types are:
-```ts
-export type IsoCode = 'AED'|'AFN'|'ALL'|'AMD'|'ANG'|'AOA'|'ARS'|'AUD'|'AWG'|'AZN'|'BAM'|'BBD'|'BDT'|'BGN'|'BHD'|'BIF'|'BMD'|'BND'|'BOB'|'BOV'|'BRL'|'BSD'|'BTN'|'BWP'|'BYN'|'BZD'|'CAD'|'CDF'|'CHE'|'CHF'|'CHW'|'CLF'|'CLP'|'CNY'|'COP'|'COU'|'CRC'|'CUC'|'CUP'|'CVE'|'CZK'|'DJF'|'DKK'|'DOP'|'DZD'|'EGP'|'ERN'|'ETB'|'EUR'|'FJD'|'FKP'|'GBP'|'GEL'|'GHS'|'GIP'|'GMD'|'GNF'|'GTQ'|'GYD'|'HKD'|'HNL'|'HRK'|'HTG'|'HUF'|'IDR'|'ILS'|'INR'|'IQD'|'IRR'|'ISK'|'JMD'|'JOD'|'JPY'|'KES'|'KGS'|'KHR'|'KMF'|'KPW'|'KRW'|'KWD'|'KYD'|'KZT'|'LAK'|'LBP'|'LKR'|'LRD'|'LSL'|'LYD'|'MAD'|'MDL'|'MGA'|'MKD'|'MMK'|'MNT'|'MOP'|'MRU'|'MUR'|'MVR'|'MWK'|'MXN'|'MXV'|'MYR'|'MZN'|'NAD'|'NGN'|'NIO'|'NOK'|'NPR'|'NZD'|'OMR'|'PAB'|'PEN'|'PGK'|'PHP'|'PKR'|'PLN'|'PYG'|'QAR'|'RON'|'RSD'|'RUB'|'RWF'|'SAR'|'SBD'|'SCR'|'SDG'|'SEK'|'SGD'|'SHP'|'SLL'|'SOS'|'SRD'|'SSP'|'STN'|'SVC'|'SYP'|'SZL'|'THB'|'TJS'|'TMT'|'TND'|'TOP'|'TRY'|'TTD'|'TWD'|'TZS'|'UAH'|'UGX'|'USD'|'USN'|'UYI'|'UYU'|'UYW'|'UZS'|'VES'|'VND'|'VUV'|'WST'|'XAF'|'XAG'|'XAU'|'XBA'|'XBB'|'XBC'|'XBD'|'XCD'|'XDR'|'XOF'|'XPD'|'XPF'|'XPT'|'XSU'|'XTS'|'XUA'|'XXX'|'YER'|'ZAR'|'ZMW'|'ZWL'
+[![npm version](https://badge.fury.io/js/%40sctg%2Fcurrencies.svg)](https://badge.fury.io/js/%40sctg%2Fcurrencies)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-export type IsoCodes = {
-    [key in IsoCode]: {
-        isoCode: string;
-        fractionDigit: number;
-        currencyName: string;
-        symbol?: string;
-        unicode?: string;
-        htmlCode?: string;
-        hexCode?: string;
-        countries: string[];
-    };
-};
+## 🚀 Features
+
+- Complete list of ISO currency codes
+- Detailed information for each currency, including:
+  - ISO code
+  - Fraction digits
+  - Currency name
+  - Symbol (where available)
+  - Unicode representation
+  - HTML and Hex codes
+  - Countries using the currency
+
+## 📦 Installation
+
+```bash
+npm install @sctg/currencies
 ```
 
-MIT License
+## 🛠️ Usage
+
+```typescript
+import { IsoCode, IsoCodes, isoCodes } from '@sctg/currencies';
+
+// Get information about a specific currency
+const usdInfo = isoCodes.USD;
+console.log(usdInfo);
+
+// Output:
+// {
+//   isoCode: '840',
+//   fractionDigit: 2,
+//   symbol: '$',
+//   unicode: 'U+00024',
+//   htmlCode: '&#x24;',
+//   hexCode: '&#36;',
+//   currencyName: 'US Dollar',
+//   countries: ['United States of America (The)', 'Puerto Rico', ...]
+// }
+```
+
+## 📚 API
+
+### `IsoCode`
+
+A type representing all available ISO currency codes.
+
+### `IsoCodes`
+
+An interface describing the structure of the currency information object.
+
+### `isoCodes`
+
+An object containing detailed information for all ISO currencies.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/currencies/issues).
+
+## 📄 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
