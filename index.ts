@@ -1,19 +1,21 @@
-export type IsoCode = 'AED'|'AFN'|'ALL'|'AMD'|'ANG'|'AOA'|'ARS'|'AUD'|'AWG'|'AZN'|'BAM'|'BBD'|'BDT'|'BGN'|'BHD'|'BIF'|'BMD'|'BND'|'BOB'|'BOV'|'BRL'|'BSD'|'BTN'|'BWP'|'BYN'|'BZD'|'CAD'|'CDF'|'CHE'|'CHF'|'CHW'|'CLF'|'CLP'|'CNY'|'COP'|'COU'|'CRC'|'CUC'|'CUP'|'CVE'|'CZK'|'DJF'|'DKK'|'DOP'|'DZD'|'EGP'|'ERN'|'ETB'|'EUR'|'FJD'|'FKP'|'GBP'|'GEL'|'GHS'|'GIP'|'GMD'|'GNF'|'GTQ'|'GYD'|'HKD'|'HNL'|'HRK'|'HTG'|'HUF'|'IDR'|'ILS'|'INR'|'IQD'|'IRR'|'ISK'|'JMD'|'JOD'|'JPY'|'KES'|'KGS'|'KHR'|'KMF'|'KPW'|'KRW'|'KWD'|'KYD'|'KZT'|'LAK'|'LBP'|'LKR'|'LRD'|'LSL'|'LYD'|'MAD'|'MDL'|'MGA'|'MKD'|'MMK'|'MNT'|'MOP'|'MRU'|'MUR'|'MVR'|'MWK'|'MXN'|'MXV'|'MYR'|'MZN'|'NAD'|'NGN'|'NIO'|'NOK'|'NPR'|'NZD'|'OMR'|'PAB'|'PEN'|'PGK'|'PHP'|'PKR'|'PLN'|'PYG'|'QAR'|'RON'|'RSD'|'RUB'|'RWF'|'SAR'|'SBD'|'SCR'|'SDG'|'SEK'|'SGD'|'SHP'|'SLL'|'SOS'|'SRD'|'SSP'|'STN'|'SVC'|'SYP'|'SZL'|'THB'|'TJS'|'TMT'|'TND'|'TOP'|'TRY'|'TTD'|'TWD'|'TZS'|'UAH'|'UGX'|'USD'|'USN'|'UYI'|'UYU'|'UYW'|'UZS'|'VES'|'VND'|'VUV'|'WST'|'XAF'|'XAG'|'XAU'|'XBA'|'XBB'|'XBC'|'XBD'|'XCD'|'XDR'|'XOF'|'XPD'|'XPF'|'XPT'|'XSU'|'XTS'|'XUA'|'XXX'|'YER'|'ZAR'|'ZMW'|'ZWL'
+export type IsoCode = 'AED' | 'AFN' | 'ALL' | 'AMD' | 'ANG' | 'AOA' | 'ARS' | 'AUD' | 'AWG' | 'AZN' | 'BAM' | 'BBD' | 'BDT' | 'BGN' | 'BHD' | 'BIF' | 'BMD' | 'BND' | 'BOB' | 'BOV' | 'BRL' | 'BSD' | 'BTN' | 'BWP' | 'BYN' | 'BZD' | 'CAD' | 'CDF' | 'CHE' | 'CHF' | 'CHW' | 'CLF' | 'CLP' | 'CNY' | 'COP' | 'COU' | 'CRC' | 'CUC' | 'CUP' | 'CVE' | 'CZK' | 'DJF' | 'DKK' | 'DOP' | 'DZD' | 'EGP' | 'ERN' | 'ETB' | 'EUR' | 'FJD' | 'FKP' | 'GBP' | 'GEL' | 'GHS' | 'GIP' | 'GMD' | 'GNF' | 'GTQ' | 'GYD' | 'HKD' | 'HNL' | 'HRK' | 'HTG' | 'HUF' | 'IDR' | 'ILS' | 'INR' | 'IQD' | 'IRR' | 'ISK' | 'JMD' | 'JOD' | 'JPY' | 'KES' | 'KGS' | 'KHR' | 'KMF' | 'KPW' | 'KRW' | 'KWD' | 'KYD' | 'KZT' | 'LAK' | 'LBP' | 'LKR' | 'LRD' | 'LSL' | 'LYD' | 'MAD' | 'MDL' | 'MGA' | 'MKD' | 'MMK' | 'MNT' | 'MOP' | 'MRU' | 'MUR' | 'MVR' | 'MWK' | 'MXN' | 'MXV' | 'MYR' | 'MZN' | 'NAD' | 'NGN' | 'NIO' | 'NOK' | 'NPR' | 'NZD' | 'OMR' | 'PAB' | 'PEN' | 'PGK' | 'PHP' | 'PKR' | 'PLN' | 'PYG' | 'QAR' | 'RON' | 'RSD' | 'RUB' | 'RWF' | 'SAR' | 'SBD' | 'SCR' | 'SDG' | 'SEK' | 'SGD' | 'SHP' | 'SLL' | 'SOS' | 'SRD' | 'SSP' | 'STN' | 'SVC' | 'SYP' | 'SZL' | 'THB' | 'TJS' | 'TMT' | 'TND' | 'TOP' | 'TRY' | 'TTD' | 'TWD' | 'TZS' | 'UAH' | 'UGX' | 'USD' | 'USN' | 'UYI' | 'UYU' | 'UYW' | 'UZS' | 'VES' | 'VND' | 'VUV' | 'WST' | 'XAF' | 'XAG' | 'XAU' | 'XBA' | 'XBB' | 'XBC' | 'XBD' | 'XCD' | 'XDR' | 'XOF' | 'XPD' | 'XPF' | 'XPT' | 'XSU' | 'XTS' | 'XUA' | 'XXX' | 'YER' | 'ZAR' | 'ZMW' | 'ZWL'
 
-export type IsoCodes = {
-    [key in IsoCode]: {
-        isoCode: string;
-        fractionDigit: number;
-        currencyName: string;
-        symbol?: string;
-        unicode?: string;
-        htmlCode?: string;
-        hexCode?: string;
-        countries: string[];
-    };
+export type Currency = {
+    isoCode: string;
+    fractionDigit: number;
+    currencyName: string;
+    symbol?: string;
+    unicode?: string;
+    htmlCode?: string;
+    hexCode?: string;
+    countries: string[];
 };
 
-export const isoCodes: IsoCodes = {
+export type IsoCodes = {
+    [key in IsoCode]: Currency;
+};
+
+export const isoCodes = {
     AED: {
         isoCode: '784',
         fractionDigit: 2,
@@ -1235,3 +1237,47 @@ export const isoCodes: IsoCodes = {
         countries: ['Zimbabwe'],
     },
 };
+
+export class Currencies {
+    static getCurrencyByCountry(country: string) {
+        return Object.keys(isoCodes).find((currency) =>
+            (isoCodes[currency as keyof typeof isoCodes]).countries.includes(country)
+        );
+    }
+
+    static getCurrency(currency: IsoCode) {
+        return (isoCodes[currency] as Currency) ;
+    }
+
+    static getCurrencyName(currency: IsoCode) {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency).currencyName;
+    }
+
+    static getCurrencyFractionDigit(currency: IsoCode) {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency).fractionDigit;
+    }
+
+    static getCurrencySymbol(currency: IsoCode) {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency).symbol;
+    }
+
+    static getCurrencyUnicode(currency: IsoCode) {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency).unicode;
+    }
+
+    static getCurrencyHtmlCode(currency: IsoCode) {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency).htmlCode;
+    }
+
+    static getCurrencyHexCode(currency: IsoCode): string|undefined {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency).hexCode;
+    }
+
+    static getCurrencyByNumberCode(code: string): Currency | undefined {
+        const _code = Object.keys(isoCodes).find((currency) => (isoCodes[currency as keyof typeof isoCodes]).isoCode === code);
+        if ((_code as keyof typeof isoCodes) !== undefined) {
+            return isoCodes[_code as keyof typeof isoCodes];
+        }
+        return undefined;
+    }
+}
