@@ -8,6 +8,7 @@ A comprehensive TypeScript library providing easy access to ISO currency codes a
 ## 🚀 Features
 
 - Complete list of ISO currency codes
+- Static utility methods for currency operations
 - Detailed information for each currency, including:
   - ISO code
   - Fraction digits
@@ -26,10 +27,10 @@ npm install @sctg/currencies
 ## 🛠️ Usage
 
 ```typescript
-import { IsoCode, IsoCodes, isoCodes } from '@sctg/currencies';
+import { Currencies, IsoCode, IsoCodes, isoCodes } from '@sctg/currencies';
 
 // Get information about a specific currency
-const usdInfo = isoCodes.USD;
+let usdInfo = isoCodes.USD;
 console.log(usdInfo);
 
 // Output:
@@ -43,21 +44,63 @@ console.log(usdInfo);
 //   currencyName: 'US Dollar',
 //   countries: ['United States of America (The)', 'Puerto Rico', ...]
 // }
+
+usdInfo = Currencies.getCurrency('USD');
+// Returns: {
+//   isoCode: '840',
+//   fractionDigit: 2,
+//   symbol: '$',
+//   unicode: 'U+00024',
+//   htmlCode: '&#x24;',
+//   hexCode: '&#36;',
+//   currencyName: 'US Dollar',
+//   countries: ['United States of America (The)', 'Puerto Rico', ...]
+// }
+
+// Get specific currency properties
+const symbol = Currencies.getCurrencySymbol('EUR');        // Returns: '€'
+const name = Currencies.getCurrencyName('GBP');            // Returns: 'Pound Sterling'
+const digits = Currencies.getCurrencyFractionDigit('JPY'); // Returns: 0
 ```
 
 ## 📚 API
 
-### `IsoCode`
+### `Currencies` Static Methods
 
-A type representing all available ISO currency codes.
+| Method | Description | Parameters | Return Type |
+|--------|-------------|------------|-------------|
+| `getCurrencyByCountry` | Find currency code by country name | `country: string` | `string \| undefined` |
+| `getCurrency` | Get complete currency information | `currency: IsoCode` | `Currency` |
+| `getCurrencyName` | Get currency name | `currency: IsoCode` | `string` |
+| `getCurrencyFractionDigit` | Get number of fraction digits | `currency: IsoCode` | `number` |
+| `getCurrencySymbol` | Get currency symbol | `currency: IsoCode` | `string` |
+| `getCurrencyUnicode` | Get Unicode representation | `currency: IsoCode` | `string` |
+| `getCurrencyHtmlCode` | Get HTML code | `currency: IsoCode` | `string` |
+| `getCurrencyHexCode` | Get hexadecimal code | `currency: IsoCode` | `string \| undefined` |
+| `getCurrencyByNumberCode` | Find currency by ISO number code | `code: string` | `Currency \| undefined` |
 
-### `IsoCodes`
+### Types
 
-An interface describing the structure of the currency information object.
+#### `IsoCode`
 
-### `isoCodes`
+A type representing all available ISO currency codes (e.g., 'USD', 'EUR', 'GBP').
 
-An object containing detailed information for all ISO currencies.
+#### `Currency`
+
+An interface describing the structure of currency information:
+
+```typescript
+interface Currency {
+    isoCode: string;
+    fractionDigit: number;
+    symbol: string;
+    unicode: string;
+    htmlCode: string;
+    hexCode?: string;
+    currencyName: string;
+    countries: string[];
+}
+```
 
 ## 🤝 Contributing
 

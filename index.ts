@@ -6,8 +6,8 @@ export type Currency = {
     currencyName: string;
     symbol?: string;
     unicode?: string;
-    htmlCode?: string;
     hexCode?: string;
+    htmlCode?: string;
     countries: string[];
 };
 
@@ -108,8 +108,8 @@ export const isoCodes = {
         fractionDigit: 2,
         symbol: 'лв',
         unicode: 'лв',
-        htmlCode: 'лв',
         hexCode: 'лв',
+        htmlCode: 'лв',
         currencyName: 'Bulgarian Lev',
         countries: ['Bulgaria'],
     },
@@ -208,8 +208,8 @@ export const isoCodes = {
         fractionDigit: 2,
         symbol: 'CHF',
         unicode: 'CHF',
-        htmlCode: 'CHF',
         hexCode: 'CHF',
+        htmlCode: 'CHF',
         currencyName: 'Swiss Franc',
         countries: ['Liechtenstein', 'Switzerland'],
     },
@@ -278,8 +278,8 @@ export const isoCodes = {
         fractionDigit: 2,
         symbol: 'Kč',
         unicode: 'Kč',
-        htmlCode: 'Kč',
         hexCode: 'Kč',
+        htmlCode: 'Kč',
         currencyName: 'Czech Koruna',
         countries: ['Czechia'],
     },
@@ -294,8 +294,8 @@ export const isoCodes = {
         fractionDigit: 2,
         symbol: 'kr',
         unicode: 'kr',
-        htmlCode: 'kr',
         hexCode: 'kr',
+        htmlCode: 'kr',
         currencyName: 'Danish Krone',
         countries: ['Denmark', 'Faroe Islands (The)', 'Greenland'],
     },
@@ -333,9 +333,9 @@ export const isoCodes = {
         isoCode: '978',
         fractionDigit: 2,
         symbol: '€',
-        unicode: 'U+020AC',
-        htmlCode: '&#x20AC;',
-        hexCode: '&#8364;',
+        unicode: 'U+20AC',
+        hexCode: '&#x20AC;',
+        htmlCode: '&#8364;',
         currencyName: 'Euro',
         countries: [
             'Åland Islands',
@@ -391,9 +391,9 @@ export const isoCodes = {
         isoCode: '826',
         fractionDigit: 2,
         symbol: '£',
-        unicode: 'U+000A3',
-        htmlCode: '&#xA3;',
-        hexCode: '&#163;',
+        unicode: 'U+00A3',
+        hexCode: '&#xA3;',
+        htmlCode: '&#163;',
         currencyName: 'Pound Sterling',
         countries: [
             'Guernsey',
@@ -407,8 +407,8 @@ export const isoCodes = {
         fractionDigit: 2,
         symbol: '₾',
         unicode: 'U+20BE',
-        htmlCode: '&#x20BE;',
-        hexCode: '&#8382;',
+        hexCode: '&#x20BE;',
+        htmlCode: '&#8382;',
         currencyName: 'Lari',
         countries: ['Georgia'],
     },
@@ -465,8 +465,8 @@ export const isoCodes = {
         fractionDigit: 2,
         symbol: 'kn',
         unicode: 'kn',
-        htmlCode: 'kn',
         hexCode: 'kn',
+        htmlCode: 'kn',
         currencyName: 'Kuna',
         countries: ['Croatia'],
     },
@@ -498,9 +498,9 @@ export const isoCodes = {
         isoCode: '356',
         fractionDigit: 2,
         symbol: '₹',
-        unicode: 'U+020B9',
-        htmlCode: '&#x20B9;',
-        hexCode: '&#8377;',
+        unicode: 'U+20B9',
+        hexCode: '&#x20B9;',
+        htmlCode: '&#8377;',
         currencyName: 'Indian Rupee',
         countries: ['Bhutan', 'India'],
     },
@@ -538,9 +538,9 @@ export const isoCodes = {
         isoCode: '392',
         fractionDigit: 0,
         symbol: '¥',
-        unicode: 'U+000A5',
-        htmlCode: '&#xa5;',
-        hexCode: '&#165;',
+        unicode: 'U+00A5',
+        hexCode: '&#xa5;',
+        htmlCode: '&#165;',
         currencyName: 'Yen',
         countries: ['Japan'],
     },
@@ -837,6 +837,10 @@ export const isoCodes = {
         fractionDigit: 2,
         currencyName: 'Russian Ruble',
         countries: ['Russian Federation (The)'],
+        hexCode: '&#x20BD;',
+        htmlCode: '&#8381;',
+        unicode: 'U+20BD',
+        symbol: '₽',
     },
     RWF: {
         isoCode: '646',
@@ -1004,9 +1008,9 @@ export const isoCodes = {
         isoCode: '840',
         fractionDigit: 2,
         symbol: '$',
-        unicode: 'U+00024',
-        htmlCode: '&#x24;',
-        hexCode: '&#36;',
+        unicode: 'U+0024',
+        htmlCode: '&#36;',
+        hexCode: '&#x24;',
         currencyName: 'US Dollar',
         countries: [
             'American Samoa',
@@ -1245,32 +1249,32 @@ export class Currencies {
         );
     }
 
-    static getCurrency(currency: IsoCode) {
-        return (isoCodes[currency] as Currency) ;
+    static getCurrency(currency: IsoCode): Currency | undefined {
+        return (isoCodes[currency] as Currency);
     }
 
-    static getCurrencyName(currency: IsoCode) {
-        return (isoCodes[currency as keyof typeof isoCodes] as Currency).currencyName;
+    static getCurrencyName(currency: IsoCode): string | undefined {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency)?.currencyName;
     }
 
-    static getCurrencyFractionDigit(currency: IsoCode) {
-        return (isoCodes[currency as keyof typeof isoCodes] as Currency).fractionDigit;
+    static getCurrencyFractionDigit(currency: IsoCode): number | undefined {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency)?.fractionDigit;
     }
 
-    static getCurrencySymbol(currency: IsoCode) {
-        return (isoCodes[currency as keyof typeof isoCodes] as Currency).symbol;
+    static getCurrencySymbol(currency: IsoCode): string | undefined {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency)?.symbol;
     }
 
-    static getCurrencyUnicode(currency: IsoCode) {
-        return (isoCodes[currency as keyof typeof isoCodes] as Currency).unicode;
+    static getCurrencyUnicode(currency: IsoCode): string | undefined {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency)?.unicode;
     }
 
-    static getCurrencyHtmlCode(currency: IsoCode) {
-        return (isoCodes[currency as keyof typeof isoCodes] as Currency).htmlCode;
+    static getCurrencyHtmlCode(currency: IsoCode): string | undefined {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency)?.htmlCode;
     }
 
-    static getCurrencyHexCode(currency: IsoCode): string|undefined {
-        return (isoCodes[currency as keyof typeof isoCodes] as Currency).hexCode;
+    static getCurrencyHexCode(currency: IsoCode): string | undefined {
+        return (isoCodes[currency as keyof typeof isoCodes] as Currency)?.hexCode;
     }
 
     static getCurrencyByNumberCode(code: string): Currency | undefined {
